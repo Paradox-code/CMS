@@ -38,6 +38,41 @@ root.mainloop()
 
 
 
+##2 WINDOW: creation of a login window
+
+import tkinter
+from tkinter import *
+root = Tk()
+root.geometry("350x350")
+
+class LoginFrame(Frame):
+    def __init__(self, master):  # constructor
+        super().__init__(master)  # print's all results
+
+        self.label_username = Label(self, text="Username")
+        self.label_password = Label(self, text="Password")
+
+        self.entry_username = Entry(self)
+        self.entry_password = Entry(self)
+
+        self.label_username.grid(row=0, sticky=E)
+        self.label_password.grid(row=1, sticky=E)
+        self.entry_username.grid(row=0, column=1)
+        self.entry_password.grid(row=1, column=1)
+
+        self.checkbox = Checkbutton(self, text="Keep me logged in")
+        self.checkbox.grid(columnspan=2)
+        self.pack()
+
+lf = LoginFrame(root)  # obj
+button_quit=Button(root,text="Login",fg="black",command=root.quit)
+button_quit.pack()
+root.mainloop()
+print()
+print("login successful")
+print("proceed further")
+
+
 
 
 ## 2nd WINDOW:  making a CMS window using simple pack method (geometry manager)

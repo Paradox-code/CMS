@@ -75,7 +75,7 @@ print("proceed further")
 
 
 
-## 2nd WINDOW:  making a CMS window using simple pack method (geometry manager)
+## 3rd WINDOW:  making a CMS window using simple pack method (geometry manager)
 
 import tkinter
 from tkinter import *
@@ -134,7 +134,7 @@ root.mainloop()
 
 
 
-## 3rd WINDOW:  making a CMS window using place method (geometry manager)
+## 4th WINDOW:  making a CMS window using place method (geometry manager)
 
 import tkinter
 from tkinter import *

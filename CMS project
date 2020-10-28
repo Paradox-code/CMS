@@ -136,57 +136,81 @@ root.mainloop()
 
 ## 4th WINDOW:  making a CMS window using place method (geometry manager)
 
+print()
+W=int(input("enter weight of product (in gm) "))
+APG=0.137
+cost=W*APG
+print("total cost will be = ₹",cost )
 import tkinter
 from tkinter import *
 from tkinter import messagebox
 root = Tk()
 root.title('  Welcome to VORTEX')
+#icon address must be ending with (.ico)
+root.iconbitmap('C:/Users/MANISH SINGH/Downloads/icons/Evermor-Design-Galaxian-Star.ico')
+root.geometry("600x700")
+root.config(bg="turquoise")
 
 def infoButton():
-    messagebox.showinfo("wait ...","you will be shortly taken to a new interface")
+    messagebox.showinfo("!","you will be projected to home screen")
 
-lb0 =Label(root,text="VORTEX courier services",fg="Black" ,width=20,font=("calibri bold",20))
-lb0.pack()
-lb1 =Label(root,text="Sender Name",fg="black", width=20,font=("calibri",13))
-lb1.pack()
+def warningButton():
+    messagebox.showwarning("  NOTE","you should agree to our terms")
+
+lb0 =Label(root,text="𝐕𝐎𝐑𝐓𝐄𝐗 𝐂𝐎𝐔𝐑𝐈𝐄𝐑 𝐒𝐄𝐑𝐕𝐈𝐂𝐄𝐒",bg="black",fg="white" ,width=25,font=("calibri bold",20))
+lb0.place(x=110,y=40)
+lb1 =Label(root,text="Sender Name",bg="turquoise",fg="black", width=20,font=("calibri bold",13))
+lb1.place(x=70,y=130)
 entry_1=Entry(root)
-entry_1.pack()
-lb2 =Label(root,text="Phone no",fg="black", width=20,font=("calibri",13))
-lb2.pack()
+entry_1.place(x=240,y=130)
+lb2 =Label(root,text="Phone no",bg="turquoise",fg="black", width=20,font=("calibri bold",13))
+lb2.place(x=58,y=180)
 entry_3=Entry(root)
-entry_3.pack()
+entry_3.place(x=240,y=180)
 
-lb3 =Label(root,text="Receiver Add",fg="black", width=20,font=("calibri",13))
-lb3.pack()
+lb3 =Label(root,text="Receiver Add",bg="turquoise",fg="black", width=20,font=("calibri bold",13))
+lb3.place(x=68,y=230)
 entry_3=Entry(root)
-entry_3.pack()
+entry_3.place(x=240,y=230)
 
-lb6 =Label(root,text="Product info",fg="black", width=20,font=("calibri",13))
-lb6.pack()
+lb6 =Label(root,text="Product info",bg="turquoise",fg="black", width=20,font=("calibri bold",13))
+lb6.place(x=68,y=350)
 entry_6=Entry(root)
-entry_6.pack()
+entry_6.place(x=240,y=350)
 
-lb4=Label(root,text="State",fg="black",width=20,font=("bold",13))
-lb4.pack()
-list_of_state=[ 'Punjab' ,'UK','UP' ,'AP' ,'Assam','HP']
+lb4=Label(root,text="State",bg="turquoise",fg="black",width=20,font=("calibri bold",13))
+lb4.place(x=43,y=286)
+list_of_state=[ 'Punjab' ,'Rajasthan','UK','Bihar' ,'UP' ,'AP' ,'Assam','HP' ,'J&K' ,'WB']
 c=StringVar()
 droplist=OptionMenu(root,c, *list_of_state)
 droplist.config(width=13)
 c.set("Receiver  State")
-droplist.pack()
-lb5=Label(root,text="Payment mode",fg="black",width=20,font=('bold',13))
-lb5.pack()
+droplist.place(x=240,y=286)
+lb5=Label(root,text="Payment mode",bg="turquoise",fg="black",width=20,font=('bold',13))
+lb5.place(x=75,y=450)
 
 var1=IntVar()
-R1=Radiobutton(root,text="Cash",fg="black",variable=var1).pack()
+R1=Radiobutton(root,text="Cash",bg="turquoise",fg="black",variable=var1).place(x=230,y=450)
 var2=IntVar()
-R2=Radiobutton(root,text="Online",fg="black",variable=var2).pack()
+R2=Radiobutton(root,text="Online", bg="turquoise",fg="black",variable=var2).place(x=290,y=450)
 var3=IntVar()
-Checkbutton(root,text="I agree to terms & conditions, provided by this service",fg="black",font=("calibri bold",13),variable=var3).place(x=105,y=503)
-Button(root, text='Proceed to pay' , width=20,fg='black',command=infoButton).pack()
+Checkbutton(root,text="𝕴 𝖆𝖌𝖗𝖊𝖊 𝖙𝖔 𝖙𝖊𝖗𝖒𝖘 & 𝖈𝖔𝖓𝖉𝖎𝖙𝖎𝖔𝖓𝖘, 𝖕𝖗𝖔𝖛𝖎𝖉𝖊𝖉 𝖇𝖞 𝖙𝖍𝖎𝖘 𝖘𝖊𝖗𝖛𝖎𝖈𝖊", bg="turquoise",fg="black",font=("calibri bold",16),variable=var3).place(x=105,y=503)
+#font generator
+Button(root, text='𝗣𝗿𝗼𝗰𝗲𝗲𝗱 𝘁𝗼 𝗽𝗮𝘆' , width=20,fg='black',command=warningButton).place(x=210,y=555)
+
+
+lb6 =Label(root,text="𝕴 𝖉𝖔𝖓'𝖙 𝖆𝖌𝖗𝖊𝖊 𝖜𝖎𝖙𝖍 𝖘𝖙𝖆𝖓𝖉𝖆𝖗𝖉 𝖙𝖊𝖗𝖒𝖘 & 𝖈𝖔𝖓𝖉𝖎𝖙𝖎𝖔𝖓𝖘.",bg="turquoise",fg="black" ,width=40,font=("calibri bold",16))
+lb6.place(x=94,y=603)
+button_quit=Button(root,text="𝐄𝐗𝐈𝐓",bg="brown",fg="black",command=root.quit)
+button_quit.place(x=265,y=650)
 print()
-print("a new window creation using geometry manager is done")
+print(" 𝐰𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐕𝐎𝐑𝐓𝐄𝐗 𝐂𝐎𝐔𝐑𝐈𝐄𝐑 𝐒𝐄𝐑𝐕𝐈𝐂𝐄𝐒 𝐰𝐞'𝐫𝐞 𝐡𝐚𝐩𝐩𝐲 𝐲𝐨𝐮'𝐫𝐞 𝐡𝐞𝐫𝐞")
+print(" 𝔭𝔩𝔢𝔞𝔰𝔢 𝔭𝔯𝔬𝔠𝔢𝔢𝔡 𝔱𝔬 𝔱𝔨𝔦𝔫𝔱𝔢𝔯 𝔴𝔦𝔫𝔡𝔬𝔴")
 root.mainloop()
+print()
+print("𝖘𝖚𝖈𝖈𝖊𝖘𝖋𝖚𝖑𝖑𝖞 𝖊𝖝𝖎𝖙𝖊𝖉")
+print("𝖛𝖎𝖘𝖎𝖙 𝖆𝖌𝖆𝖎𝖓 :) ")
+
 
 
 

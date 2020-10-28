@@ -146,8 +146,7 @@ from tkinter import *
 from tkinter import messagebox
 root = Tk()
 root.title('  Welcome to VORTEX')
-#icon address must be ending with (.ico)
-root.iconbitmap('C:/Users/MANISH SINGH/Downloads/icons/Evermor-Design-Galaxian-Star.ico')
+
 root.geometry("600x700")
 root.config(bg="turquoise")
 
